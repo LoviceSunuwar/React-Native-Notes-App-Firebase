@@ -28,7 +28,7 @@ class ReadComponent extends Component {
     querySnapshot.forEach((res) => {
       const { book_name,
         author_name,
-        coauthor_name,
+        publi_name,
         description,
         book_price,
         book_year,
@@ -38,7 +38,7 @@ class ReadComponent extends Component {
         key: res.id,
         book_name,
         author_name,
-        coauthor_name,
+        publi_name,
         description,
         book_price,
         book_year,
@@ -107,7 +107,7 @@ class ReadComponent extends Component {
                     <ListItem.Title>{'Status:- ' +res.book_hot}</ListItem.Title>
                     <ListItem.Title>{'Genre:- ' +res.book_genre}</ListItem.Title>
                     <ListItem.Subtitle>{'Author:- ' +res.author_name}</ListItem.Subtitle>
-                    <ListItem.Subtitle>{'Co Author:- ' +res.coauthor_name}</ListItem.Subtitle>
+                    <ListItem.Subtitle>{'Publisher:- ' +res.publi_name}</ListItem.Subtitle>
                     <ListItem.Subtitle>{'Description:- ' +res.description}</ListItem.Subtitle>
                   </ListItem.Content>
                   <ListItem.Chevron 

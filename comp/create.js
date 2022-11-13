@@ -17,7 +17,7 @@ class CreateComponent extends Component {
     this.state = {
       book_name: '',
       author_name: '',
-      coauthor_name:'',
+      publi_name:'',
       description: '',
       book_price:'',
       book_year:'',
@@ -60,8 +60,8 @@ class CreateComponent extends Component {
     this.state.book_price === '',
     this.state.book_hot === '',
     this.state.book_year === '',
-    this.state.coauthor_name == '',
-    this.state.book_image == ''
+    this.state.publi_name == ''
+   // this.state.book_image == ''
     ){
      alert('Fields are empty.')
     } else {
@@ -71,24 +71,24 @@ class CreateComponent extends Component {
       this.ref.add({
         book_name: this.state.book_name,
         author_name: this.state.author_name,
-        coauthor_name:this.state.coauthor_name,
+        publi_name:this.state.publi_name,
         description: this.state.description,
         book_price:this.state.book_price,
         book_year:this.state.book_year,
         book_genre:this.state.book_genre,
         book_hot:this.state.book_hot,
-        book_image:this.state.book_image
+       // book_image:this.state.book_image
       }).then((res) => {
         this.setState({
           book_name: '',
           author_name: '',
-          coauthor_name:'',
+          publi_name:'',
           description: '',
           book_price:'',
           book_year:'',
           book_genre:'',
           book_hot:'',
-          book_image:'',
+         // book_image:'',
           isLoading: false,
         });
         this.props.navigation.navigate('ReadComponent')
@@ -202,12 +202,12 @@ class CreateComponent extends Component {
                 book_year:'',
                 book_genre:'',
                 book_hot:'',
-                book_image:'',
+            //   book_image:'',
                 isLoading: false,
               });
               this.props.navigation.navigate('ReadComponent');
               //this.uploadImage;
-              console.log.setBookImage();
+           //   console.log.setBookImage();
             }}
             color="black"
           />

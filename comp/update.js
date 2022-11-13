@@ -10,7 +10,7 @@ class UpdateComponent extends Component {
     this.state = {
       book_name: '',
       author_name: '',
-      coauthor_name:'',
+      publi_name:'',
       description: '',
       book_price:'',
       book_year:'',
@@ -30,7 +30,7 @@ class UpdateComponent extends Component {
           book_name: user.book_name,
           lbook_name: user.book_name,
           author_name: user.author_name,
-          coauthor_name:user.coauthor_name,
+          publi_name:user.publi_name,
           description: user.description,
           book_price: user.book_price,
           book_year: user.book_year,
@@ -57,7 +57,7 @@ class UpdateComponent extends Component {
     docUpdate.set({
       book_name: this.state.book_name,
         author_name: this.state.author_name,
-        coauthor_name:this.state.coauthor_name,
+        publi_name:this.state.publi_name,
         description: this.state.description,
         book_price:this.state.book_price,
         book_year:this.state.book_year,
@@ -67,7 +67,7 @@ class UpdateComponent extends Component {
       this.setState({
           book_name: '',
           author_name: '',
-          coauthor_name:'',
+          publi_name:'',
           description: '',
           book_price:'',
           book_year:'',
@@ -134,9 +134,9 @@ class UpdateComponent extends Component {
         </View>
         <View style={styles.formEl}>
           <TextInput
-              placeholder={'Co Author Name'}
-              value={this.state.coauthor_name}
-              onChangeText={(val) => this.inputEl(val, 'set_coauthor_name')}
+              placeholder={'Publisher'}
+              value={this.state.publi_name}
+              onChangeText={(val) => this.inputEl(val, 'set_publi_name')}
           />
         </View>
         <View style={styles.formEl}>
