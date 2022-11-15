@@ -16,7 +16,7 @@ export default function BookImagePicker() {
       quality: 1,
     });
 
-    //console.log(result);
+    console.log(result);
    // console.log("Image Uri is: " + result.assets[0].uri);
 
     if (!result.canceled) {

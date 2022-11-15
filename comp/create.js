@@ -60,8 +60,8 @@ class CreateComponent extends Component {
     this.state.book_price === '',
     this.state.book_hot === '',
     this.state.book_year === '',
-    this.state.publi_name == ''
-   // this.state.book_image == ''
+    this.state.publi_name == '',
+    this.state.book_image == ''
     ){
      alert('Fields are empty.')
     } else {
@@ -77,7 +77,7 @@ class CreateComponent extends Component {
         book_year:this.state.book_year,
         book_genre:this.state.book_genre,
         book_hot:this.state.book_hot,
-       // book_image:this.state.book_image
+        book_image:this.state.book_image
       }).then((res) => {
         this.setState({
           book_name: '',
@@ -88,10 +88,10 @@ class CreateComponent extends Component {
           book_year:'',
           book_genre:'',
           book_hot:'',
-         // book_image:'',
+          book_image:'',
           isLoading: false,
         });
-        this.props.navigation.navigate('ReadComponent')
+        this.props.navigation.navigate('CartComponent')
       })
       .catch((err) => {
         console.error("Error occured: ", err);
@@ -136,9 +136,9 @@ class CreateComponent extends Component {
         </View>
         <View style={styles.formEle}>
           <TextInput
-              placeholder={'Co Author Name'}
+              placeholder={'Publisher'}
               value={this.state.coauthor_name}
-              onChangeText={(val) => this.onValUpdate(val, 'coauthor_name')}
+              onChangeText={(val) => this.onValUpdate(val, 'publi_name')}
           />
         </View>
         <View style={styles.formEle}>
